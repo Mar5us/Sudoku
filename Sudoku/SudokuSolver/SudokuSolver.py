@@ -106,9 +106,9 @@ def fillSudoku(sudoku, assignment):
             sudoku[minI][minJ] = valuetoTry
             assignment[minI][minJ].remove(valuetoTry)
             assignment = redoAssignment(sudoku, assignment)
-            sodukoN = fillSudoku(sudoku, assignment)
-            if sodukoN != 0:
-                return sodukoN
+            sudokuN = fillSudoku(sudoku, assignment)
+            if sudokuN != 0:
+                return sudokuN
             else:
                 sudoku = copy.deepcopy(oldSudoku)
                 assignment = copy.deepcopy(oldAssignment)
